@@ -21,7 +21,7 @@ env:
     - AS=wls12x
 
 before_install:
-  - git clone git@github.com:felixbarny/p6spy.git
+  - git clone https://github.com/felixbarny/p6spy.git
   - pushd p6spy
   - mvn clean install
   - popd
