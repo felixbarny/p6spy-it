@@ -24,7 +24,7 @@ before_install:
   - jdk_switcher use oraclejdk8
   - git clone https://github.com/felixbarny/p6spy.git
   - pushd p6spy
-  - mvn clean install -PskipTests=true
+  - mvn clean install -DskipTests=true
   - popd
   - jdk_switcher use oraclejdk7
   - export ORG_GRADLE_PROJECT_container=${AS}
