@@ -21,10 +21,12 @@ env:
     - AS=wls12x
 
 before_install:
+  - jdk_switcher use oraclejdk8
   - git clone https://github.com/felixbarny/p6spy.git
   - pushd p6spy
-  - mvn clean install
+  - mvn clean install -PskipTests=true
   - popd
+  - jdk_switcher use oraclejdk7
   - export ORG_GRADLE_PROJECT_container=${AS}
 
 script: ./gradlew unitTest --info
