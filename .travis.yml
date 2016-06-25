@@ -24,6 +24,7 @@ before_install:
   - jdk_switcher use oraclejdk8
   - git clone https://github.com/felixbarny/p6spy.git
   - pushd p6spy
+  - git checkout event-emitting-wrapper
   - mvn clean install -DskipTests=true
   - popd
   - jdk_switcher use oraclejdk7
